@@ -5,7 +5,7 @@ const TemplateExpressions = () => {
     const name = "Arthur";
     const data = {
         age: 18,
-        job: "Projetista"
+        job: "Programador"
     }
     return(
         <div className="template-expressions">
