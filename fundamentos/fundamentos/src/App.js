@@ -1,13 +1,19 @@
+//COMPONENTES
+import TemplateExpressions from './components/TemplateExpressions';
+import FirstComponent from './components/FirstComponent';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          Te amo, meu amor
-        </h1>
+        <FirstComponent />
+        <TemplateExpressions />
       </header>
+      <main>
+        <FirstComponent />
+      </main>
     </div>
   );
 }
