@@ -1,5 +1,6 @@
 import "./App.css";
 import meme from "./assets/img2.jpg";
+import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
       </div>
       <div>
         <ManageData />
+        
+      </div>
+      <div>
+        <ListRender />
       </div>
     </div>
   );
