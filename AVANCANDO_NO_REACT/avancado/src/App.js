@@ -1,5 +1,6 @@
 import "./App.css";
 import meme from "./assets/img2.jpg";
+import ManageData from "./components/ManageData";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <div>
         <h2>Segue aii a piada que é a IA rsrs</h2>
         <img src={meme} alt="meme" />
+      </div>
+      <div>
+        <ManageData />
       </div>
     </div>
   );

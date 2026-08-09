@@ -1,8 +1,14 @@
 const ManageData = () => {
-    
+  const informacao = "Me desculpa, amor"  
+
   return (
-    <div>ManageData</div>
-  )
-}
+    <div>
+      <div>
+          <p>Mensagem: {informacao}</p>
+          <button></button>
+      </div>
+    </div>
+  );
+};
 
 export default ManageData
