@@ -2,6 +2,7 @@ import "./App.css";
 import meme from "./assets/img2.jpg";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
+import ConditionalRender from "./components/ConditionalRender";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
       </div>
       <div>
         <ListRender />
+      </div>
+      <div>
+        <ConditionalRender />
       </div>
     </div>
   );
