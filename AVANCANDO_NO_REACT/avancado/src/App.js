@@ -64,7 +64,9 @@ function App() {
         <Fragments propFragment="teste"/>
       </div>
       <div> {/* PropChildren*/}
-        <Container />
+        <Container >
+          <p>Esse é o conteúdo</p>
+        </Container>
       </div>
     </div>
   );
