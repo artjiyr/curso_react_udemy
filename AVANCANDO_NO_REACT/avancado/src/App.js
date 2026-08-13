@@ -8,6 +8,9 @@ import { useState } from "react";
 import PersonDetails from "./components/PersonDetails";
 import Fragments from "./components/Fragments";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
   const [userName] = useState("Mari Miya");
@@ -18,6 +21,16 @@ function App() {
     {id: 3, namePersona: "Haru", age: "Desconhecida", color: "Roxo", newPerson: false},
     {id: 4, namePersona: "Angel", age: "Desconhecida", color: "Branco", newPerson: false}
   ]
+
+  function showMessage() {
+    console.log("Mostrando mensagem")
+  }
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
 
   return (
     <div className="App">
@@ -54,6 +67,7 @@ function App() {
       <div> {/*loop em Array em objetos*/}
         {persons.map((person) => (
           <PersonDetails
+          key={person.id}
           namePersona={person.namePersona}
           age={person.age} 
           color={person.color} 
@@ -67,6 +81,13 @@ function App() {
         <Container >
           <p>Esse é o conteúdo</p>
         </Container>
+      </div>
+      <div> {/*Executar ação*/}
+        <ExecuteFunction myFunction={showMessage} />
+      </div>
+      <div> {/*State Lift*/}
+        <Message msg={message}/>
+        <ChangeMessageState handleMessage={handleMessage}/>
       </div>
     </div>
   );
