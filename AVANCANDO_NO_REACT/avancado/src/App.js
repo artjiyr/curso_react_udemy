@@ -6,13 +6,15 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUsername from "./components/ShowUsername";
 import { useState } from "react";
 import PersonDetails from "./components/PersonDetails";
+import Fragments from "./components/Fragments";
+import Container from "./components/Container";
 
 function App() {
   const [userName] = useState("Mari Miya");
 
   const persons = [
     {id: 1, namePersona: "Peter", age: 10, color: "Preto", newPerson: true},
-    {id: 2, namePersona: "Spy", age: 7, color: "Preto", newPerson: true},
+    {id: 2, namePersona: "Spy", age: 7, color: "Amarelo", newPerson: true},
     {id: 3, namePersona: "Haru", age: "Desconhecida", color: "Roxo", newPerson: false},
     {id: 4, namePersona: "Angel", age: "Desconhecida", color: "Branco", newPerson: false}
   ]
@@ -20,7 +22,6 @@ function App() {
   return (
     <div className="App">
       <h1>Avançando no React</h1>
-
       <div>
         <img src="/img1.jpg" alt="paisagem-anime" />
       </div>
@@ -58,6 +59,12 @@ function App() {
           color={person.color} 
           newPerson={person.newPerson}/>
         ))}
+      </div>
+      <div> {/* Fragment */}
+        <Fragments propFragment="teste"/>
+      </div>
+      <div> {/* PropChildren*/}
+        <Container />
       </div>
     </div>
   );
