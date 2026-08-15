@@ -3,10 +3,6 @@ import './App.css';
 
 import CardPerson from './components/CardPerson';
 
-
-
-
-
 function App() {
 
   const persons = [
