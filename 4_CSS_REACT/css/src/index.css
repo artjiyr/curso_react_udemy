@@ -4,3 +4,13 @@ body {
   box-sizing: border-box;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.pink-title {
+  color: rgb(226, 27, 87);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.normal-title {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}

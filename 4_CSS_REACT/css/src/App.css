@@ -11,9 +11,10 @@
 
   h1{
     font-family: "Cinzel Decorative", serif;
-    font-size: 2.5vw;
+    font-size: 36px;
     color: #fde4eb;
     text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
   }
 }
 
