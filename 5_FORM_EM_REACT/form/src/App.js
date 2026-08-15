@@ -5,7 +5,11 @@ function App() {
   return (
     <div className="App">
       <h1>Forms</h1>
+      {/* 1- criação do forms */}
       <MyForms />
+
+      {/* 2- Label envolvendo o input */}
+      
     </div>
   );
 }
