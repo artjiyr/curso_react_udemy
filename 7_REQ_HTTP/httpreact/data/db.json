@@ -1,0 +1,44 @@
+{
+    "musics": [
+        {
+            "id": 1,
+            "name": "On My Own",
+            "autor": "Ross Lynch"
+        },
+        {
+            "id": 2,
+            "name": "Leak It",
+            "autor": "FLO"
+        },
+        {
+            "id": 3,
+            "name": "Russian Roulette",
+            "autor": "Red Velvet"
+        },
+        {
+            "id": 4,
+            "name": "Like thad",
+            "autor": "BABYMONSTER"
+        },
+        {
+            "id": 5,
+            "name": "Debut",
+            "autor": "Katseye"
+        },
+        {
+            "id": 6,
+            "name": "I Still Haven't Found What I'm Looking For",
+            "autor": "U2"
+        },
+        {
+            "id": 7,
+            "name": "Accidentally In Love",
+            "autor": "Counting Crows"
+        },
+        {
+            "id": 8,
+            "name": "Someday",
+            "autor": "Milo Manheim, Meg Donnelly"
+        }
+    ]
+}
