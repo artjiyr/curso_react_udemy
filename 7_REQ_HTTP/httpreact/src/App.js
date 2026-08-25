@@ -5,6 +5,9 @@ import { useState, useEffect} from "react";
 const url = "http://localhost:3000/musics";
 
 function App() {
+  const [name, setName] = useState("");
+  const [autor, setAutor] = useState("");
+
   const [musics, setMusics] = useState([])
 
   //1 - resgatando dados
@@ -22,6 +25,27 @@ function App() {
     fetchMusics();
   }, []);
 
+  // 2 - add musics
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const music = {
+      name,
+      autor,
+    };
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(music)
+    });
+
+    
+  } 
+
   return (
     <div className="App">
       <h1>Lista de músicas</h1>
@@ -30,6 +54,30 @@ function App() {
           <li className="card" key={music.name}><h3>{music.name} - {music.autor}</h3></li>
         ))}
       </ul>
+
+      <div className="Add-Music">
+        <form onSubmit={handleSubmit}>
+          <label>
+          Música: 
+          <input type="text" 
+          value={name} 
+          name="name"
+          required
+          onChange={(e) => 
+          setName(e.target.value)}></input>  
+          </label>
+          <label>
+          Autor:  
+          <input type="text" 
+          value={autor} 
+          name="name"
+          required 
+          onChange={(e) => 
+          setAutor(e.target.value)}></input>  
+          </label>
+          <input type="submit" value="Adicionar" className="button-add"></input>
+        </form>
+      </div>
     </div>
   );
 }

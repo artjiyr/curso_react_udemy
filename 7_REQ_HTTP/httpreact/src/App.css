@@ -37,3 +37,36 @@
   font-family: monospace;
   font-weight: 600;
 }
+
+.Add-Music form {
+  background: linear-gradient(63deg, rgb(30, 127, 238), rgb(107, 172, 247));
+  border-radius: 20px;
+  padding: 1.2em;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.288);
+}
+
+.Add-Music form, label {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+.Add-Music input {
+  padding: 15px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.button-add {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(0, 119, 255);
+  font-weight: bold;
+  font-size: 0.7em;
+}
