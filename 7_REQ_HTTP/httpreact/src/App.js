@@ -43,7 +43,13 @@ function App() {
       body: JSON.stringify(music)
     });
 
-    
+    // 3 - Carregamento dinâmico
+    const addedMusic = await res.json();
+
+    setMusics((prevMusics) => [...prevMusics, addedMusic]);
+
+    setName("");
+    setAutor("");
   } 
 
   return (
@@ -51,7 +57,7 @@ function App() {
       <h1>Lista de músicas</h1>
       <ul className="ContainerMusic">
         {musics.map((music) => (
-          <li className="card" key={music.name}><h3>{music.name} - {music.autor}</h3></li>
+          <li className="card" key={music.id}><h3>{music.name} - {music.autor}</h3></li>
         ))}
       </ul>
 
@@ -70,7 +76,7 @@ function App() {
           Autor:  
           <input type="text" 
           value={autor} 
-          name="name"
+          name="autor"
           required 
           onChange={(e) => 
           setAutor(e.target.value)}></input>  
